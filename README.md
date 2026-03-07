@@ -11,8 +11,6 @@
 
 ![Interface 2xOneFakeDbGenerator](https://imgur.com/a/Hmyx7tB)
 
-*(Capture d'écran complète de l'interface ultra-moderne en mode orange)*
-
 ---
 
 ## ✨ À propos
