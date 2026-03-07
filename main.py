@@ -73,7 +73,6 @@ class App(ctk.CTk):
         self.create_widgets()
 
     def create_widgets(self):
-        # ==================== HEADER ORANGE ====================
         self.header = ctk.CTkFrame(self, fg_color="#1a1a1a", height=110)
         self.header.pack(fill="x", padx=0, pady=0)
         self.header.pack_propagate(False)
@@ -83,7 +82,6 @@ class App(ctk.CTk):
         self.main_frame = ctk.CTkFrame(self)
         self.main_frame.pack(fill="both", expand=True, padx=30, pady=20)
 
-        # ==================== LEFT PANEL ====================
         self.left_panel = ctk.CTkFrame(self.main_frame, width=360, corner_radius=20)
         self.left_panel.pack(side="left", fill="y", padx=(0, 20), pady=10)
 
@@ -109,7 +107,6 @@ class App(ctk.CTk):
         self.template_menu = ctk.CTkOptionMenu(self.left_panel, values=list(self.templates.keys()), variable=self.template_var, height=42, font=ctk.CTkFont(size=14), command=self.load_template)
         self.template_menu.pack(fill="x", padx=25, pady=5)
 
-        # ==================== CENTER ====================
         self.center_panel = ctk.CTkFrame(self.main_frame, corner_radius=20)
         self.center_panel.pack(side="left", fill="both", expand=True, padx=15, pady=10)
 
@@ -132,7 +129,6 @@ class App(ctk.CTk):
         self.btn_down = ctk.CTkButton(self.move_frame, text="↓ Descendre", width=130, height=40, font=ctk.CTkFont(size=14), command=self.move_down)
         self.btn_down.pack(side="left", padx=10)
 
-        # ==================== RIGHT PANEL (avec crédits intégrés) ====================
         self.right_panel = ctk.CTkFrame(self.main_frame, width=380, corner_radius=20)
         self.right_panel.pack(side="right", fill="y", padx=(15, 0), pady=10)
 
@@ -152,7 +148,6 @@ class App(ctk.CTk):
         self.label_result = ctk.CTkLabel(self.right_panel, text="", font=ctk.CTkFont(size=14), wraplength=320, justify="left")
         self.label_result.pack(pady=10)
 
-        # CRÉDITS BIEN VISIBLES ICI (plus jamais coupé)
         self.credits_label = ctk.CTkLabel(self.right_panel, text="Owner / Développeur : bsk222", font=ctk.CTkFont(size=16, weight="bold"), text_color="#FF8800", cursor="hand2")
         self.credits_label.pack(side="bottom", pady=20)
         self.credits_label.bind("<Button-1>", lambda e: webbrowser.open("https://github.com/bsk222"))
